@@ -1,0 +1,61 @@
+generated: '2026-07-20'
+method: probed
+source: live DNS (dig) and TLS/HTTP probes of the legacy Baan domains
+notes: >-
+  The Baan domains are still actively held and hygienically managed by Infor (DNSSEC signed, CAA
+  pinned, SPF and DMARC p=reject, mail routed through Infor's Cisco IronPort tenant and Microsoft 365),
+  but they serve no HTTPS: port 443 does not complete a TLS handshake on either host. Only plaintext
+  HTTP is answered, and it returns a blanket 301 to the Infor LN product page. Recorded as https:
+  false — this is a parked/redirect estate, not a live API host.
+hosts:
+- host: baan.com
+  https: false
+  https_error: TLS handshake failed on port 443
+  http: true
+  http_status: 301
+  redirect_to: https://www.infor.com/product-summary/erp/ln/
+  hsts: false
+- host: www.baan.com
+  https: false
+  https_error: TLS handshake failed on port 443
+  http: true
+  http_status: 301
+  redirect_to: https://www.infor.com/product-summary/erp/ln/
+  hsts: false
+domains:
+- domain: baan.com
+  dnssec: true
+  ds_records: 1
+  caa:
+  - '0 issue "amazon.com"'
+  - '0 issue "digicert.com; cansignhttpexchanges=yes"'
+  - '0 issue "letsencrypt.org"'
+  - '0 issue "sectigo.com"'
+  - '0 issuewild "amazon.com"'
+  - '0 issuewild "digicert.com; cansignhttpexchanges=yes"'
+  - '0 issuewild "letsencrypt.org"'
+  - '0 issuewild "sectigo.com"'
+  - '0 iodef "mailto:mad@infor.com"'
+  spf: true
+  spf_record: v=spf1 exists:%{i}.spf.hc3692-74.iphmx.com include:spf.protection.outlook.com -all
+  dmarc: true
+  dmarc_policy: reject
+  dmarc_record: v=DMARC1; p=reject; rua=mailto:l5hgamx6@ag.dmarcian.com
+  mx:
+  - mx1.hc3692-74.iphmx.com
+  - mx2.hc3692-74.iphmx.com
+- domain: baan.nl
+  dnssec: true
+  ds_records: 1
+  caa:
+  - '0 issue "amazon.com"'
+  - '0 issuewild "amazon.com"'
+  - '0 iodef "mailto:mad@infor.com"'
+  spf: true
+  spf_record: v=spf1 exists:%{i}.spf.hc3692-74.iphmx.com include:spf.protection.outlook.com -all
+  dmarc: true
+  dmarc_policy: reject
+  dmarc_record: v=DMARC1; p=reject; rua=mailto:l5hgamx6@ag.dmarcian.com
+  mx:
+  - mx1.hc3692-74.iphmx.com
+  - mx2.hc3692-74.iphmx.com

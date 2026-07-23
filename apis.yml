@@ -1,7 +1,31 @@
 aid: baan
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/baan.png
 name: Baan
-description: Baan is a company surfaced as a portfolio company of battery-ventures and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: 'Baan (Baan Company N.V., originally The Baan Corporation) was a Dutch enterprise resource
+  planning software vendor founded in 1978 in Barneveld, Netherlands by Jan Baan and later joined by his
+  brother Paul Baan. Baan built one of the first genuinely component-based ERP suites, known for its
+  Dynamic Enterprise Modeler (DEM), its Baan Tools 4GL development environment, and deep manufacturing
+  and project-industry functionality. At its late-1990s peak Baan served roughly 3,000 customers and
+  posted close to $700 million in revenue, making it one of the leading global ERP providers alongside
+  SAP, Oracle and PeopleSoft. Following accounting controversy and a collapse in its share price, Baan
+  was acquired by the British engineering group Invensys in 2000, sold on to SSA Global Technologies in
+  2003, and absorbed into Infor Global Solutions when Infor acquired SSA in 2006. Baan no longer exists
+  as an operating company or an independent brand: the product line lives on as Infor LN, and the
+  baan.com and baan.nl domains now permanently redirect to the Infor LN product page. Consequently this
+  profile carries no first-party API surface of its own — any modern programmatic access to the Baan
+  lineage is delivered through Infor LN REST APIs and the Infor ION API gateway on Infor''s developer
+  platform. Baan Company is listed by Battery Ventures as an exited investment.'
 url: https://raw.githubusercontent.com/api-evangelist/baan/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +33,41 @@ x-backed-by:
 - battery-ventures
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status: acquired
+x-status-detail: Acquired by Invensys (2000), sold to SSA Global (2003), absorbed into Infor (2006);
+  the product line continues as Infor LN.
+x-successor: infor
+x-api-surface: none
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Enterprise Resource Planning
+- ERP
+- Enterprise Software
+- Manufacturing
+- Supply Chain
+- Netherlands
+- Acquired
+- Legacy
 apis: []
+common:
+- type: Website
+  url: https://www.infor.com/product-summary/erp/ln/
+- type: Wikipedia
+  url: https://en.wikipedia.org/wiki/Baan_Corporation
+- type: Crunchbase
+  url: https://www.crunchbase.com/organization/baan
+- type: DomainSecurity
+  url: security/baan-domain-security.yml
+- type: LLMsTxt
+  url: llms/baan-llms.txt
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com

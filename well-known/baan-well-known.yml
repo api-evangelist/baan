@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: probed
+source: live HTTP probes of the legacy Baan domains
+notes: >-
+  Baan operates no host of its own. Both baan.com and www.baan.com answer on port 80 only and issue a
+  blanket HTTP 301 to https://www.infor.com/product-summary/erp/ln/ for every path, including every
+  /.well-known/ path probed below. Following the redirect returns 200 text/html for all of them — the
+  Infor LN marketing page — so a naive follow-redirect probe reports five false 200s. Recorded here as
+  redirects, not as discovery documents. No /.well-known/ surface exists for this provider and no
+  WellKnown or SecurityTxt pointer is wired in apis.yml.
+host: http://baan.com
+documents:
+- path: /.well-known/security.txt
+  status: 301
+  redirect_to: https://www.infor.com/product-summary/erp/ln/
+  found: false
+- path: /.well-known/openid-configuration
+  status: 301
+  redirect_to: https://www.infor.com/product-summary/erp/ln/
+  found: false
+- path: /.well-known/oauth-authorization-server
+  status: 301
+  redirect_to: https://www.infor.com/product-summary/erp/ln/
+  found: false
+- path: /.well-known/api-catalog
+  status: 301
+  redirect_to: https://www.infor.com/product-summary/erp/ln/
+  found: false
+- path: /.well-known/ai-plugin.json
+  status: 301
+  redirect_to: https://www.infor.com/product-summary/erp/ln/
+  found: false

@@ -1,0 +1,39 @@
+# Baan
+
+> Baan (Baan Company N.V.) was a Dutch ERP software vendor founded in 1978 in Barneveld, Netherlands
+> by Jan Baan. It is no longer an operating company: acquired by Invensys in 2000, sold to SSA Global
+> in 2003, and absorbed into Infor in 2006. The product line continues as Infor LN. Baan publishes no
+> first-party API, developer portal, SDK, or specification of its own.
+
+## Status
+
+- Status: acquired / defunct as an independent brand
+- Successor product: Infor LN (https://www.infor.com/product-summary/erp/ln/)
+- Successor company: Infor Global Solutions
+- Legacy domains: baan.com and baan.nl — HTTP only, blanket 301 to the Infor LN product page
+- API surface: none. Programmatic access to the Baan lineage is delivered through Infor LN REST APIs
+  and the Infor ION API gateway on Infor's developer platform, not by Baan.
+
+## Background
+
+- Baan Corporation (Wikipedia): https://en.wikipedia.org/wiki/Baan_Corporation
+- Baan on Crunchbase: https://www.crunchbase.com/organization/baan
+- Battery Ventures lists Baan Company as an exited investment: https://www.battery.com/list-of-all-companies/
+
+## Notable technology (historical)
+
+- Dynamic Enterprise Modeler (DEM) — business-process-driven configuration of the ERP suite
+- Baan Tools — the 4GL development environment used to extend and customize the suite
+- Component-based ERP architecture, strong in discrete manufacturing and project industries
+
+## Artifacts in this profile
+
+- apis.yml — the APIs.json profile for this company
+- security/baan-domain-security.yml — probed DNS/TLS posture of the legacy Baan domains
+- well-known/baan-well-known.yml — probed /.well-known/ surface (none; all paths redirect)
+
+## Notes for agents
+
+There is nothing to call here. Do not attempt to construct Baan API requests. If a user asks for Baan
+ERP integration, route them to Infor LN REST APIs / Infor ION API under Infor, and treat "Baan" as a
+legacy name for that product line.
