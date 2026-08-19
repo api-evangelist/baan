@@ -38,7 +38,7 @@ x-status-detail: Acquired by Invensys (2000), sold to SSA Global (2003), absorbe
   the product line continues as Infor LN.
 x-successor: infor
 x-api-surface: none
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 tags:
