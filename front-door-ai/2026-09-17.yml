@@ -1,0 +1,34 @@
+# Front Door AI Index — baan — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: baan
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: www.infor.com
+  final_host: www.infor.com
+  ownership: shared
+  owner: infor
+  shares_host_with:
+  - infor
+  inherited_from: null
+  verdict: scored
+  score: null
+  host_score: 44
+  density: null
+  words: 1087
+  tiers:
+    agentic: 22
+    core: 22
+    model: 0
+  ambiguous: 14
+  top_terms:
+    AI: 21
+    agentic: 14
+    agent: 10
+    AI agent: 7
+    intelligence: 2
+    MCP: 1
+    automation: 1
+    gen ai: 1
+    smart: 1
