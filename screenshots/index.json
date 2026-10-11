@@ -1,0 +1,11 @@
+[
+  {
+    "repo": "baan",
+    "captured_at": "2026-10-11T182005",
+    "source_url": "https://www.infor.com/product-summary/erp/ln/",
+    "source_type": "Website",
+    "file": "baan-2026-10-11T182005.png",
+    "bytes": 225663,
+    "capture": "playwright-local"
+  }
+]
